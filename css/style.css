@@ -14,36 +14,7 @@ body {
 
 
 
-header {
-    background-color: rgb(13, 6, 6);
-}
 
-.nav {
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    font-size: 2vw;
-}
-
-.nav a {
-    text-decoration: none;
-    color: rgb(216, 123, 123);
-}
-
-.nav a:hover {
-    color: white;
-}
-
-.nav ul {
-    list-style: none;
-    display: flex;
-}
-
-.nav ul li {
-    margin-right: 10px;
-    color: rgb(216, 123, 123);
-}
 
 #portada {
     filter: brightness(0.2);
@@ -362,9 +333,7 @@ h1 {
 }
 
 @media (max-width: 768px) {
-    .nav {
-        font-size: 14px;
-    }
+    
 
     .container .logo a {
         
