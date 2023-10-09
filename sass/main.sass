@@ -1,0 +1,202 @@
+
+$primary-color: #007bff;
+$secondary-color: #333;
+
+
+@mixin button-styles {
+    background-color: $primary-color;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+%highlight {
+    font-weight: bold;
+    color: $primary-color;
+}
+
+%underline {
+    text-decoration: underline;
+}
+
+
+* 
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+body 
+    font-family: Arial, sans-serif
+    background-color: rgb(170, 175, 180)
+    margin: 0
+    padding: 0
+    overflow-x: hidden
+
+
+header 
+    .container-fluid
+        background-color: $secondary-color
+        color: white
+        padding: 20px
+
+    .navbar
+        background-color: $secondary-color
+
+    .navbar-brand 
+        img
+            width: 50vw
+            height: 100%
+
+    .navbar-toggler-icon
+        background-color: $primary-color
+
+    .nav-item 
+        a.nav-link
+            text-decoration: none
+            color: $primary-color
+
+
+main 
+    #portada
+        filter: brightness(0.2)
+        height: 300px
+
+    .contenedor
+        box-sizing: border-box
+        height: 100%
+
+    #portada img
+        height: 100%
+
+#lomascomprado
+    display: flex
+    flex-direction: row-reverse
+    justify-content: space-between
+    align-items: center
+
+    h2
+        @extend %highlight
+
+    img
+        object-fit: cover
+        height: 30vw
+
+.fotos1 
+    width: 100%
+    transition: transform 0.3s, filter 0.3s
+    position: relative
+    margin: 20px
+    padding: 10px
+
+    &:last-child
+        margin-right: auto
+
+    img
+        width: 100%
+        height: 100%
+        object-fit: cover
+        filter: brightness(0.2)
+        transition: filter 0.7s
+
+    &:hover
+        transform: scale(1.02)
+
+    &:hover img
+        filter: brightness(1)
+
+#lomasvendidos
+    padding: 20px
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+
+    h2
+        @extend %highlight
+
+    img
+        object-fit: cover
+        height: 25vw
+        width: 100%
+
+.fotos2 
+    width: 100%
+    height: 520px
+    margin-right: 50px
+    transition: transform 0.3s, filter 0.3s
+    position: relative
+
+    &:last-child
+        margin-right: auto
+
+    img
+        width: 100%
+        height: 100%
+        object-fit: cover
+        filter: brightness(0.2)
+        transition: filter 0.7s
+
+    &:hover
+        transform: scale(1.02)
+
+    &:hover img
+        filter: brightness(1)
+
+
+footer 
+    color: white
+    background-color: black
+    display: flex
+    padding: 10px
+
+
+@media (max-width: 768px) 
+    .container .logo a 
+        margin-top: 50px
+
+    #lomascomprado 
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-template-rows: repeat(2, 1fr)
+        gap: 20px
+
+    .fotos1,
+    .fotos2 
+        width: 100%
+        height: auto
+        margin-right: 0
+        padding: 0px
+        text-align: center
+
+    #lomasvendidos 
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-template-rows: repeat(2, 1fr)
+        gap: 20px
+
+    .fotos1,
+    .fotos2 
+        margin-bottom: 20px
+        margin: 0
+
+    .fotos1 img,
+    .fotos2 img 
+        filter: brightness(1)
+        transition: none
+
+    #lomascomprado img,
+    #lomasvendidos img 
+        object-fit: cover
+        height: 25vw
+        width: 25vw
+
+@media (max-width: 415px) 
+    #lomasvendidos img,
+    #lomascomprados img 
+        align-items: center
+
+    h4 
+        font-size: 3vw
