@@ -14,11 +14,11 @@ body {
 
 .contenedor {
     box-sizing: border-box;
-    height: 100%;
+    @include altura-100;
 }
 
 #portada img {
-    height: 100%;
+    @include altura-100;
 }
 
 h2 {
@@ -44,7 +44,7 @@ h2 {
 }
 
 #lomascomprado {
-    display: flex;
+    @include display-flex;
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
@@ -275,9 +275,7 @@ h1 {
     }
 
     &:hover {
-        .image-overlay {
-            opacity: 1;
-        }
+        @extend .image-overlay;
     }
 }
 
@@ -324,4 +322,9 @@ footer {
     background-color: black;
     display: flex;
     padding: 10px;
+}
+
+.pie {
+    @extend footer;
+    text-align: center;
 }
