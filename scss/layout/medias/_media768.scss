@@ -1,0 +1,46 @@
+@media (max-width: 768px) {
+    .container .logo a {
+      margin-top: 50px;
+    }
+  
+    #lomascomprado {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 20px;
+    }
+  
+    .fotos1,
+    .fotos2 {
+      width: 100%;
+      height: auto;
+      margin-right: 0;
+      padding: 0px;
+      text-align: center;
+    }
+  
+    #lomasvendidos {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 20px;
+    }
+  
+    .fotos1,
+    .fotos2 {
+      margin-bottom: 20px;
+      margin: 0;
+  
+      img {
+        filter: brightness(1);
+        transition: none;
+      }
+    }
+  
+    #lomascomprado img,
+    #lomasvendidos img {
+      object-fit: cover;
+      height: 25vw;
+      width: 25vw;
+    }
+  }
