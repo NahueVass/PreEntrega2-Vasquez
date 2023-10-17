@@ -234,14 +234,18 @@ body {
   
   
   .videos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  
-  .video {
-    margin: 10px;
-  }
+    margin: 5vw;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 200px;
+        
+    }
+
+    .video {
+        width: auto;
+        height: 20vw;
+    }
+
   
   .video p {
     text-align: center;
@@ -343,12 +347,44 @@ body {
   
   @media (max-width: 768px) {
     .container .logo a {
-      margin-top: 50px;
+        margin-top: 50px;
+        left: 0;
+    }
+
+    #portada {
+        height: auto;
+    }
+
+    #portada img {
+        height: 50vw;
+        width: 100%;
+    }
+
+    .videos {
+      margin: 50px;
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: center;
+        gap: 10vw;
+    }
+
+    .video {
+        width: 100%;
+        height: 40vw;
+    }
+
+    .video p {
+        text-align: center;
+    }
+
+    .titulo {
+        text-align: center;
+        margin-top: 40px;
     }
   
     #lomascomprado {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(2, 1fr);
       gap: 20px;
     }
@@ -388,4 +424,76 @@ body {
       width: 25vw;
     }
   }
-  
+
+  @media (max-width: 425px) {
+    .container .logo a {
+        margin-top: 50px;
+        left: 0;
+        font-size: 2rem;
+    }
+
+    .navbar-toggler {
+        margin-right: 0.5rem;
+    }
+
+    #portada {
+        height: auto;
+    }
+
+    #portada img {
+        height: auto;
+        width: 100%;
+    }
+
+    .videos {
+      margin: 50px;
+        display: grid;
+        grid-template-columns: auto;
+        gap: 20vw;
+    }
+
+    .video {
+        width: 100%;
+        height: 100vw;
+        
+    }
+
+    .video p {
+        text-align: center;
+    }
+
+    .titulo {
+        text-align: center;
+        margin-top: 40px;
+        font-size: 1.5rem;
+    }
+
+    #lomascomprado,
+    #lomasvendidos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .fotos1,
+    .fotos2 {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .fotos1 img,
+    .fotos2 img {
+        filter: brightness(1);
+        transition: none;
+    }
+
+    #lomascomprado img,
+    #lomasvendidos img {
+        object-fit: cover;
+        width: 100%;
+        height: auto;
+    }
+}
