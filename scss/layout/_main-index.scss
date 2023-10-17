@@ -39,10 +39,12 @@ h2 {
 }
 
 #lomascomprado {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2vw;
+    justify-items: center;
+
 
     h2 {
         display: none;
@@ -50,7 +52,7 @@ h2 {
 
     img {
         object-fit: cover;
-        height: 30vw;
+        height: 20vw;
     }
 }
 
@@ -231,9 +233,8 @@ h1 {
 }
 
 .estrenos-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .estreno {

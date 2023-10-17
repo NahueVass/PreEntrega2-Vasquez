@@ -2,6 +2,10 @@
   .container .logo a {
     margin-top: 50px;
   }
+  .estrenos-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
 
   #lomascomprado {
     display: grid;

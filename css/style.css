@@ -37,15 +37,16 @@ h2 {
   width: 20vw; }
 
 #lomascomprado {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
-  align-items: center; }
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2vw;
+  justify-items: center; }
   #lomascomprado h2 {
     display: none; }
   #lomascomprado img {
     object-fit: cover;
-    height: 30vw; }
+    height: 20vw; }
 
 .fotos1 {
   width: 100%;
@@ -176,9 +177,8 @@ h1 {
   margin: 40px 0; }
 
 .estrenos-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; }
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); }
 
 .estreno {
   object-fit: cover;
@@ -257,10 +257,14 @@ footer,
 @media (max-width: 425px) {
   #portada img {
     height: 100%;
-    width: 106vw; }
+    width: 100vw; }
+
+  .estrenos-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); }
 
   .imagen-prouctos1 {
-    width: 107vw; }
+    width: 100vw; }
 
   #lomascomprado {
     display: grid;
@@ -278,10 +282,14 @@ footer,
     color: white;
     background-color: black;
     display: flex;
-    width: 106vw; } }
+    width: 100vw; } }
 @media (max-width: 768px) {
   .container .logo a {
     margin-top: 50px; }
+
+  .estrenos-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); }
 
   #lomascomprado {
     display: grid;
