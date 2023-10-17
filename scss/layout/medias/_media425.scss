@@ -1,0 +1,34 @@
+@media (max-width: 425px) {
+  #portada img {
+    height: 100%;
+    width: 106vw;
+}
+.imagen-prouctos1{
+  width: 107vw;
+
+}
+#lomascomprado {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+}
+  main {
+    #catalogo {
+      .productos-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+
+  footer,
+.pie {
+    color: white;
+    background-color: black;
+    display: flex;
+    width: 106vw;
+}
+  
+}

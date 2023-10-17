@@ -1,11 +1,10 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: $primary-color;
+    background-color: #aaafb4;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
 }
-
 
 #portada {
     filter: brightness(0.2);
@@ -14,29 +13,25 @@ body {
 
 .contenedor {
     box-sizing: border-box;
-    @include altura-100;
+    height: 100%;
 }
 
 #portada img {
-    @include altura-100;
+    height: 100%;
 }
 
 h2 {
     display: none;
 }
 
-.container {
-    .logo {
-        a {
-            font-family: 'Jolly Lodger', 'Jolly Logder';
-            color: $second-color;
-            text-decoration: none;
-            font-size: 4rem;
-            position: relative;
-            top: 20px;
-            left: 20px;
-        }
-    }
+.container .logo a {
+    font-family: 'Jolly Lodger', 'Jolly Logder';
+    color: #d87b7b;
+    text-decoration: none;
+    font-size: 4rem;
+    position: relative;
+    top: 20px;
+    left: 20px;
 }
 
 .img-juegos {
@@ -44,7 +39,7 @@ h2 {
 }
 
 #lomascomprado {
-    @include display-flex;
+    display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
@@ -81,10 +76,10 @@ h2 {
 
     &:hover {
         transform: scale(1.02);
+    }
 
-        img {
-            filter: brightness(1);
-        }
+    &:hover img {
+        filter: brightness(1);
     }
 }
 
@@ -127,16 +122,16 @@ h2 {
 
     &:hover {
         transform: scale(1.02);
+    }
 
-        img {
-            filter: brightness(1);
-        }
+    &:hover img {
+        filter: brightness(1);
     }
 }
 
 #catalogo {
     display: flex;
-    background-color: rgb(170, 175, 180);
+    background-color: #aaafb4;
     align-items: flex-start;
     padding: 20px;
 }
@@ -145,7 +140,7 @@ h2 {
     width: 20%;
     height: 100px;
     text-align: center;
-    background-color: rgb(170, 175, 180);
+    background-color: #aaafb4;
 
     h1 {
         color: black;
@@ -157,7 +152,7 @@ h2 {
         list-style: none;
         padding: 0;
         margin: 0;
-        background-color: rgb(170, 175, 180);
+        background-color: #aaafb4;
     }
 
     li {
@@ -166,13 +161,13 @@ h2 {
 
     a {
         text-decoration: none;
-        color: rgb(216, 123, 123);
+        color: #d87b7b;
         font-size: 30px;
     }
 }
 
 .productos-container {
-    background-color: rgb(152, 158, 165);
+    background-color: #989ea5;
     width: 1200px;
     display: flex;
     flex-wrap: wrap;
@@ -207,21 +202,23 @@ h2 {
 h1 {
     font-family: 'Jolly Lodger';
     font-size: 100px;
+    text-align: center;
 }
 
-.videos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
 
-.video {
-    margin: 10px;
-
-    p {
-        text-align: center;
+    .videos {
+        margin: 50px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 10vw;
     }
-}
+
+    .video {
+        width: auto;
+        height: 20vw;
+    }
+
+
 
 .titulo {
     text-align: center;
@@ -236,7 +233,7 @@ h1 {
 .estrenos-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .estreno {
@@ -253,29 +250,37 @@ h1 {
     }
 }
 
-.imagen-producto1 {
-    margin: 20px;
-    display: flex;
-    justify-content: space-between;
-    height: 315px;
-    width: 475px;
-    box-shadow: 5px 5px 5px black;
+.imagen-producto1-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); // Aquí ajusta el ancho de las columnas según tus necesidades
+    gap: 20vw;
+    padding: 20px;
 
-    .image-overlay {
-        position: absolute;
-        height: 315px;
-        width: 475px;
-        background-color: rgba(0, 0, 0, 0.7);
-        color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        opacity: 0;
-        transition: opacity 0.3s;
-    }
+    .imagen-producto1 {
+        position: relative;
+        box-shadow: 5px 5px 5px black;
+        overflow: hidden;
 
-    &:hover {
-        @extend .image-overlay;
+        .image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        &:hover {
+            .image-overlay {
+                opacity: 1;
+            }
+        }
     }
 }
 
@@ -314,10 +319,11 @@ h1 {
 }
 
 .form-main {
-    background: linear-gradient(to bottom, black, rgb(255, 255, 255));
+    background: linear-gradient(to bottom, black, white);
 }
 
-footer {
+footer,
+.pie {
     color: white;
     background-color: black;
     display: flex;
@@ -325,6 +331,5 @@ footer {
 }
 
 .pie {
-    @extend footer;
     text-align: center;
 }
