@@ -5,6 +5,14 @@
   .estrenos-container {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+    
+}
+#estrenos {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  margin: 10px;
+  justify-content: center;
 }
 
   #lomascomprado {
@@ -58,6 +66,11 @@
 .video {
     width: auto;
     height: 50vw;
+}
+.imagen-producto1{
+  img{
+    width: 50vw;
+  }
 }
 
   }

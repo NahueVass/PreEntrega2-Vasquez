@@ -9,6 +9,7 @@ body {
 #portada {
     filter: brightness(0.2);
     height: 300px;
+    width: 100%;
 }
 
 .contenedor {
@@ -224,17 +225,27 @@ h1 {
 
 .titulo {
     text-align: center;
-    margin-top: 40px;
+    
 }
 
 #estrenos {
+    display: flex;
+    flex-wrap: wrap;
     text-align: center;
-    margin: 40px 0;
+    margin: 10px;
+
 }
 
 .estrenos-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    position: relative;
+    left: 5vw;
+    gap: 10px;
+    margin: 10vw;
+    justify-content: center;
+    .imagen-producto1{
+        width: 100%;
+    }
 }
 
 .estreno {
@@ -253,7 +264,7 @@ h1 {
 
 .imagen-producto1-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); // Aquí ajusta el ancho de las columnas según tus necesidades
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
     gap: 20vw;
     padding: 20px;
 

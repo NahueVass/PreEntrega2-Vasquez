@@ -12,7 +12,8 @@ body {
 
 #portada {
   filter: brightness(0.2);
-  height: 300px; }
+  height: 300px;
+  width: 100%; }
 
 .contenedor {
   box-sizing: border-box;
@@ -169,16 +170,23 @@ h1 {
   height: 20vw; }
 
 .titulo {
-  text-align: center;
-  margin-top: 40px; }
+  text-align: center; }
 
 #estrenos {
+  display: flex;
+  flex-wrap: wrap;
   text-align: center;
-  margin: 40px 0; }
+  margin: 10px; }
 
 .estrenos-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); }
+  position: relative;
+  left: 5vw;
+  gap: 10px;
+  margin: 10vw;
+  justify-content: center; }
+  .estrenos-container .imagen-producto1 {
+    width: 100%; }
 
 .estreno {
   object-fit: cover;
@@ -255,16 +263,49 @@ footer,
   text-align: center; }
 
 @media (max-width: 425px) {
-  #portada img {
-    height: 100%;
-    width: 100vw; }
-
   .estrenos-container {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr); }
+    width: 100%; }
 
-  .imagen-prouctos1 {
-    width: 100vw; }
+  #estrenos {
+    display: flex; }
+
+  .imagen-producto {
+    width: 100%; }
+    .imagen-producto img {
+      width: 100vw;
+      height: 100vw; }
+
+  .imagen-productos1 {
+    width: 100%; }
+    .imagen-productos1 img {
+      width: 100%; }
+
+  .imagen-producto1 {
+    display: flex; }
+    .imagen-producto1 img {
+      width: 100%; }
+
+  .productos1 {
+    width: 100%; }
+
+  #catalogo {
+    gap: 70vw;
+    display: grid;
+    width: 100%;
+    padding: 0; }
+
+  .enlaces-categoria {
+    display: flex;
+    height: 100px;
+    text-align: center;
+    background-color: #aaafb4; }
+    .enlaces-categoria ul {
+      position: relative;
+      top: 20vw; }
+      .enlaces-categoria ul a {
+        font-size: 6vw; }
+    .enlaces-categoria h1 {
+      text-align: center; }
 
   #lomascomprado {
     display: grid;
@@ -275,7 +316,8 @@ footer,
   main #catalogo .productos-container {
     display: flex;
     flex-direction: column;
-    align-items: center; }
+    align-items: center;
+    width: 100%; }
 
   footer,
   .pie {
@@ -290,6 +332,13 @@ footer,
   .estrenos-container {
     display: grid;
     grid-template-columns: repeat(1, 1fr); }
+
+  #estrenos {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 10px;
+    justify-content: center; }
 
   #lomascomprado {
     display: grid;
@@ -334,6 +383,9 @@ footer,
 
   .video {
     width: auto;
-    height: 50vw; } }
+    height: 50vw; }
+
+  .imagen-producto1 img {
+    width: 50vw; } }
 
 /*# sourceMappingURL=style.css.map */

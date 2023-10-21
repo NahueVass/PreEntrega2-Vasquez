@@ -1,38 +1,95 @@
 @media (max-width: 425px) {
-  #portada img {
-    height: 100%;
-    width: 100vw;
-}
-.estrenos-container {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-}
-.imagen-prouctos1{
-  width: 100vw;
 
+  .estrenos-container {
+    width: 100%;
+  }
+  #estrenos {
+    display: flex;
+    
 }
-#lomascomprado {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 20px;
-}
+
+  .imagen-producto {
+    width: 100%;
+
+    img {
+      width: 100vw;
+      height: 100vw;
+    }
+  }
+
+  .imagen-productos1 {
+    width: 100%;
+    img{
+      width: 100%;
+    }
+    
+
+  }
+  .imagen-producto1{
+    display: flex;
+    img{
+      width: 100%;
+    }
+  }
+
+  .productos1 {
+    width: 100%;
+
+  }
+
+  #catalogo {
+    gap: 70vw;
+    display: grid;
+    width: 100%;
+    padding: 0;
+  }
+  
+
+  .enlaces-categoria {
+    display: flex;
+    height: 100px;
+    text-align: center;
+    background-color: #aaafb4;
+    
+    ul{
+      
+      position: relative;
+      top: 20vw;
+      a{
+        font-size: 6vw;
+      }
+    }  
+    h1{
+      text-align: center;
+    }
+    
+
+  }
+
+  #lomascomprado {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+  }
+
   main {
     #catalogo {
       .productos-container {
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 100%;
       }
     }
   }
 
   footer,
-.pie {
+  .pie {
     color: white;
     background-color: black;
     display: flex;
     width: 100vw;
-}
-  
+  }
+
 }
